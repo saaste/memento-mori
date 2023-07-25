@@ -1,0 +1,78 @@
+:root {
+    --size: 6px;
+    --square-gap: 4px;
+    --month-gap: 10px;
+    --year-color: #cabbbb;
+    --past-color: #c9d1d9;
+    --event-color: rgb(180, 2, 220);
+}
+
+html,body {
+    background-color: #0d1117;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > * {
+    max-width: 800px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: var(--month-gap);
+    column-gap: var(--month-gap);
+    
+}
+
+.quote {
+    color: var(--year-color);
+    margin-top: 50px;
+}
+
+.github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 50px;
+}
+
+.github a {
+    color: var(--year-color);
+    text-decoration: none;
+}
+
+.year {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--square-gap);
+    align-items: center;
+    color: var(--year-color)
+}
+
+.weeks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--square-gap) var(--square-gap)
+}
+
+.week {
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid var(--past-color)
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.past {
+    background-color: var(--past-color)
+}

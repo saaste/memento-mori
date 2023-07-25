@@ -1,0 +1,20 @@
+:root {
+    --school-color: rgb(2, 27, 220);
+    --work-color: rgb(220, 126, 2);
+    --people-color: rgb(2, 122, 30);
+}
+
+.school {
+    background-color: var(--work-color);
+    border-color: var(--work-color);
+}
+
+.work {
+    background-color: var(--school-color);
+    border-color: var(--school-color);
+}
+
+.people {
+    background-color: var(--people-color);
+    border-color: var(--people-color);
+}

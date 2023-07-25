@@ -1,0 +1,21 @@
+{
+  "birthday": "1995-03-28",
+  "lifeExpectancy": 91,
+  "events": [
+    {
+      "date": "2001-07-11",
+      "title": "School related event",
+      "label": "school"
+    },
+    {
+      "date": "2005-03-16",
+      "title": "Work related event",
+      "label": "work"
+    },
+    {
+      "date": "2010-07-24",
+      "title": "People related event",
+      "label": "people"
+    }
+  ]
+}

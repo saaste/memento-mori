@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    container_name: memento-mori
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./config.json:/app/config.json
+      - ./static/labels.css:/app/static/labels.css
+    ports:
+      - "3333:3333"
