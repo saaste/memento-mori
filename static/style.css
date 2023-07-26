@@ -1,13 +1,14 @@
 :root {
-    --size: 6px;
+    --size: 5px;
     --square-gap: 4px;
     --month-gap: 10px;
-    --year-color: #cabbbb;
+    --year-color: #c9d1d9;
     --past-color: #c9d1d9;
     --event-color: rgb(180, 2, 220);
 }
 
-html,body {
+html,
+body {
     background-color: #0d1117;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -18,7 +19,7 @@ html,body {
     align-items: center;
 }
 
-.container > * {
+.container>* {
     max-width: 800px;
 }
 
@@ -28,7 +29,7 @@ html,body {
     flex-wrap: wrap;
     row-gap: var(--month-gap);
     column-gap: var(--month-gap);
-    
+
 }
 
 .quote {
