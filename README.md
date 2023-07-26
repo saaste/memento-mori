@@ -15,7 +15,7 @@ Then copy the three example files:
 
 Add your birthday and life expectancy to `config.json`. You can also include events, but that is optional.
 
-Each event has has a `label` field. This field represents a CSS class that can be utilized in `static/style.css`. The provided sample files contain example events and styles.
+Each event has a `label` field. This field represents a CSS class that can be utilized in `static/style.css`. The provided sample files contain example events and styles.
 
 ## How to run
 
