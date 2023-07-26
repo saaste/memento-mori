@@ -1,3 +1,4 @@
 config.json
 docker-compose.yaml
 static/labels.css
+go.work
