@@ -53,7 +53,7 @@ func GetYears(yearOfBirth int, lifeExpectancy int, config config.AppConfig) []Ye
 	years := make([]Year, 0)
 	for currentYear := firstYear; currentYear <= lastYear; currentYear++ {
 		weeks := make([]Week, 0)
-		for currentMonth := 1; currentMonth < 12; currentMonth++ {
+		for currentMonth := 1; currentMonth <= 12; currentMonth++ {
 			weeks = append(weeks, getWeeks(currentYear, currentMonth, config)...)
 		}
 		years = append(years, Year{
