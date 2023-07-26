@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 	"os"
 	"strconv"
@@ -101,8 +102,7 @@ func getYears(yearOfBirth int, lifeExpectancy int, config AppConfig) []Year {
 func handleRoot(w http.ResponseWriter, r *http.Request) {
 	config, err := readConfig()
 	if err != nil {
-		fmt.Printf("ERROR: reading config.json failed: %s\n", err)
-		os.Exit(1)
+		log.Fatalf("ERROR: reading config.json failed: %s\n", err)
 	}
 
 	years := getYears(config.Birthday.Year(), config.LifeExpectancy, config)
@@ -132,13 +132,11 @@ func readConfig() (AppConfig, error) {
 
 func main() {
 	if !utils.FileExists("./config.json") {
-		fmt.Println("ERROR: config.json does not exist")
-		os.Exit(1)
+		log.Fatalln("ERROR: config.json does not exist")
 	}
 
 	if !utils.FileExists("./static/labels.css") {
-		fmt.Println("ERROR: static/labels.css does not exist")
-		os.Exit(1)
+		log.Fatalln("ERROR: static/labels.css does not exist")
 	}
 
 	port := "3333"
@@ -146,8 +144,7 @@ func main() {
 
 	if len(args) > 0 {
 		if _, err := strconv.Atoi(args[0]); err != nil {
-			fmt.Println("ERROR: port must be an integer")
-			os.Exit(1)
+			log.Fatalln("ERROR: port must be an integer")
 		}
 		port = args[0]
 	}
@@ -165,7 +162,6 @@ func main() {
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("Server closed\n")
 	} else if err != nil {
-		fmt.Printf("ERROR: unable to start the server: %s\n", err)
-		os.Exit(1)
+		log.Fatalf("ERROR: unable to start the server: %s\n", err)
 	}
 }
